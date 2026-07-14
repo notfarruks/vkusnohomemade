@@ -1,0 +1,12 @@
+{
+  "name": "vkusno-homemade",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vkusno Homemade Ankara — online store with WhatsApp ordering",
+  "scripts": {
+    "start": "serve . -l tcp://0.0.0.0:${PORT:-3000} -n"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
