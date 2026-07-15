@@ -16,6 +16,15 @@ npm start
 
 Railway auto-detects Node via `package.json` and runs `npm start` (static server on `$PORT`).
 
+## Stock indicators
+
+Add `st` to any item in the `ITEMS` array:
+- `st: 0` → "Tükendi / Нет в наличии", ordering disabled
+- `st: 1–5` → "Son X / Осталось X" badge, cart quantity capped at X
+- no `st` field → normal availability, no badge
+
+Example: `{c:"cakes", t:"Napoleon", r:"Торт «Наполеон»", p:1200, u:"kg", st: 2},`
+
 ## Editing products
 
 All products live in `index.html` inside the `ITEMS` array (TR/RU names, price, unit, category).
