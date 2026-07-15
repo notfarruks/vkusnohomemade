@@ -191,7 +191,8 @@ footer iframe{width:100%;height:210px;border:1px solid rgba(201,162,39,.35);bord
 .dhead h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700}
 .dhead button{color:var(--gold-2);display:flex}
 .dhead svg{width:22px;height:22px;stroke:var(--gold-2)}
-.dbody{flex:1;overflow-y:auto;padding:18px 22px}
+.dbody{flex:1;overflow-y:auto;min-height:0;padding:0 0 14px}
+#cartItems{padding:6px 22px 4px}
 .citem{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px dashed var(--line)}
 .citem .nm{flex:1;min-width:0}
 .citem .nm b{display:block;font-size:14px;color:var(--g900);line-height:1.3}
@@ -393,7 +394,8 @@ body.has-cart #bottombar{transform:none}
     <h3 data-t="dTitle">Sepetiniz</h3>
     <button id="closeDrawer" aria-label="close"><svg><use href="#i-x"/></svg></button>
   </div>
-  <div class="dbody" id="cartItems"></div>
+  <div class="dbody">
+  <div id="cartItems"></div>
   <div class="dform" id="cartForm">
     <label data-t="lType">Teslimat</label>
     <div class="seg" id="deliverySeg">
@@ -408,6 +410,7 @@ body.has-cart #bottombar{transform:none}
     </div>
     <label for="fNote" data-t="lNote">Not (isteğe bağlı)</label>
     <input id="fNote" type="text">
+  </div>
   </div>
   <div class="dfoot">
     <div class="trow"><span data-t="total">Toplam</span><b id="cartTotal">0 TL</b></div>
