@@ -9,7 +9,10 @@
 <meta property="og:description" content="Ev yemekleri & tatlılar. WhatsApp ile online sipariş — her gün 10:00–22:00.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0C352A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230C352A'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23C9A227' font-family='Georgia'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/favicon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
@@ -44,7 +47,7 @@
   --paper:#FBF8F1;
   --card:#FFFEFA;
   --ink:#22312B;
-  --ink-2:#5C6E66;
+  --ink-2:#51625A;
   --line:#E7DFCC;
   --wa:#1FA855;
   --r:14px;
@@ -73,8 +76,8 @@ input,textarea,select{font-family:inherit;font-size:15px}
 .searchbox{flex:1;max-width:380px;margin-left:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.10);border:1px solid rgba(228,200,120,.30);border-radius:99px;padding:8px 16px;transition:border-color .2s}
 .searchbox:focus-within{border-color:var(--gold-2);background:rgba(255,255,255,.16)}
 .searchbox svg{width:16px;height:16px;stroke:var(--gold-2);flex:none}
-.searchbox input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:14px;min-width:0}
-.searchbox input::placeholder{color:rgba(246,241,230,.55)}
+.searchbox input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:16px;min-width:0}
+.searchbox input::placeholder{color:rgba(246,241,230,.72)}
 .langsw{display:flex;background:rgba(255,255,255,.10);border:1px solid rgba(228,200,120,.30);border-radius:99px;padding:3px}
 .langsw button{color:rgba(246,241,230,.7);font-size:12px;font-weight:700;letter-spacing:.08em;padding:6px 12px;border-radius:99px;transition:.2s}
 .langsw button.on{background:var(--gold);color:var(--g950)}
@@ -91,7 +94,7 @@ input,textarea,select{font-family:inherit;font-size:15px}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--gold-2);font-size:11.5px;font-weight:700;letter-spacing:.5em;text-transform:uppercase}
 .hero .eyebrow::before,.hero .eyebrow::after{content:"";width:44px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));display:block}
 .hero .eyebrow::after{transform:scaleX(-1)}
-.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(58px,9vw,104px);letter-spacing:.14em;margin:18px 0 0;color:#FDF9EE;text-indent:.14em}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(54px,8.5vw,92px);letter-spacing:.14em;margin:18px 0 0;color:#FDF9EE;text-indent:.14em;text-wrap:balance}
 .hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,3vw,27px);color:var(--gold-2);margin-top:2px}
 .orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto}
 .orn i{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));display:block}
@@ -156,7 +159,7 @@ main{padding:56px 0 80px}
 .stepper{display:none;align-items:center;gap:2px;background:var(--g900);border-radius:99px;padding:3px}
 .stepper.show{display:inline-flex}
 .add.hide{display:none}
-.stepper button{width:30px;height:30px;border-radius:99px;color:var(--gold-2);font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;transition:.15s}
+.stepper button{width:36px;height:36px;border-radius:99px;color:var(--gold-2);font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;transition:.15s}
 .stepper button:hover{background:var(--g700)}
 .stepper .q{min-width:44px;text-align:center;color:#fff;font-size:13px;font-weight:800}
 #noRes{display:none;text-align:center;padding:70px 0;color:var(--ink-2)}
@@ -205,7 +208,7 @@ footer iframe{width:100%;height:210px;border:1px solid rgba(201,162,39,.35);bord
 .citem .nm b{display:block;font-size:14px;color:var(--g900);line-height:1.3}
 .citem .nm span{font-size:12px;color:var(--ink-2)}
 .citem .st{display:flex;align-items:center;gap:2px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:2px}
-.citem .st button{width:26px;height:26px;border-radius:99px;color:var(--g900);font-weight:800;font-size:14px}
+.citem .st button{width:32px;height:32px;border-radius:99px;color:var(--g900);font-weight:800;font-size:15px}
 .citem .st button:hover{background:var(--cream)}
 .citem .st .q{min-width:38px;text-align:center;font-size:12.5px;font-weight:800;color:var(--g900)}
 .citem .pr{font-size:13.5px;font-weight:800;color:var(--g900);min-width:70px;text-align:right}
@@ -215,7 +218,7 @@ footer iframe{width:100%;height:210px;border:1px solid rgba(201,162,39,.35);bord
 .dempty .serif{font-size:26px;color:var(--g900);margin-bottom:6px}
 .dform{padding:0 22px 8px}
 .dform label{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:12px 0 5px}
-.dform input,.dform textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fff;outline:none;transition:border-color .2s;resize:none}
+.dform input,.dform textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fff;outline:none;transition:border-color .2s;resize:none;font-size:16px}
 .dform input:focus,.dform textarea:focus{border-color:var(--gold)}
 .seg{display:flex;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px;gap:3px}
 .seg button{flex:1;font-size:12.5px;font-weight:700;color:var(--ink-2);border-radius:8px;padding:9px 4px;transition:.18s}
@@ -227,6 +230,18 @@ footer iframe{width:100%;height:210px;border:1px solid rgba(201,162,39,.35);bord
 #waOrder{width:100%;justify-content:center}
 #waOrder:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .dnote{font-size:11px;color:var(--ink-2);text-align:center;margin-top:10px;line-height:1.5}
+
+/* ---------- entry gate ---------- */
+#gate{position:fixed;inset:0;z-index:200;background:radial-gradient(900px 500px at 50% -10%,#14523F 0%,var(--g900) 45%,var(--g950) 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;padding:24px}
+#gate.off{display:none}
+#gate img{width:110px;height:110px;border-radius:50%;box-shadow:0 10px 36px rgba(0,0,0,.35),0 0 0 1.5px rgba(201,162,39,.45)}
+#gate h2{font-family:'Cormorant Garamond',serif;color:var(--gold-3);font-size:26px;font-weight:700;letter-spacing:.06em}
+#gate p{color:rgba(246,241,230,.65);font-size:13.5px}
+#gate input{width:200px;text-align:center;font-size:22px;letter-spacing:.4em;padding:12px 8px;border-radius:12px;border:1.5px solid rgba(201,162,39,.5);background:rgba(255,255,255,.08);color:#fff;outline:none}
+#gate input:focus{border-color:var(--gold-2)}
+#gate button{margin-top:2px}
+#gate.err input{border-color:#D66;animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 
 /* ---------- fab & toast ---------- */
 #fab{position:fixed;right:22px;bottom:22px;z-index:55;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(31,168,85,.45);transition:transform .18s}
@@ -242,6 +257,14 @@ body.has-cart #bottombar{transform:none}
 #bottombar .bbi b{color:var(--gold-2);font-size:17px;font-weight:800}
 #bottombar .bbi span{color:rgba(246,241,230,.65);font-size:11.5px;font-weight:600}
 #bbOpen{padding:11px 22px;font-size:13px}
+
+/* ---------- a11y & motion ---------- */
+h1,h2,h3{text-wrap:balance}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2.5px solid var(--gold);outline-offset:2px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
 
 @media(max-width:860px){
   footer .cols{grid-template-columns:1fr}
@@ -298,12 +321,20 @@ body.has-cart #bottombar{transform:none}
 </defs>
 </svg>
 
+<div id="gate">
+  <img src="img/logo.webp" alt="" onerror="this.style.display='none'">
+  <h2>VKUSNO HOMEMADE</h2>
+  <p>Giriş kodu · Код доступа</p>
+  <input id="gateCode" type="password" inputmode="numeric" maxlength="8" autocomplete="off">
+  <button id="gateBtn" class="btn btn-gold">Giriş</button>
+</div>
+
 <header id="topbar">
   <div class="wrap">
     <a class="brand" href="#top"><img class="blogo" src="img/logo.webp" alt="" onerror="this.style.display='none'"><span class="btxt">VKUSNO<small>homemade</small></span></a>
     <div class="searchbox">
       <svg><use href="#i-search"/></svg>
-      <input id="searchInput" type="text" placeholder="" autocomplete="off">
+      <input id="searchInput" type="text" placeholder="" autocomplete="off" aria-label="Menüde ara">
     </div>
     <div class="langsw" id="langSw">
       <button data-lang="tr" class="on">TR</button>
@@ -499,7 +530,8 @@ const ITEMS = [
   {c:"semi", t:"Pelmeni",                 r:"Пельмени",              p:800, u:"kg", b:"raw"},
   {c:"semi", t:"Tavuklu Pelmeni",         r:"Пельмени с курицей",    p:500, u:"kg", b:"raw"},
   {c:"semi", t:"Gürcü Hinkali",           r:"Хинкали грузинские",    p:75,  u:"pc", b:"raw"},
-  {c:"semi", t:"Vareniki",                r:"Вареники",              p:400, u:"kg", b:"raw"},
+  {c:"semi", t:"Vareniki (etli)",         r:"Вареники с мясом",      p:800, u:"kg", b:"raw"},
+  {c:"semi", t:"Vareniki (patatesli)",    r:"Вареники с картофелем", p:400, u:"kg", b:"raw"},
   {c:"semi", t:"Sırnik",                  r:"Сырник",                p:70,  u:"pc", b:"raw"},
   {c:"semi", t:"Paştet (rulo)",           r:"Паштет (рулет)",        p:500, u:"pc"},
   {c:"semi", t:"Gürze",                   r:"Гюрза",                 p:800, u:"kg", b:"raw"},
@@ -541,7 +573,7 @@ const ITEMS = [
   {c:"cafe", t:"Tavuklu Krep",             r:"Креп с курицей",             p:60,  u:"pc"},
   {c:"cafe", t:"Lorlu Krep",               r:"Креп с творогом",            p:60,  u:"pc"},
   {c:"cafe", t:"Olivye Salata",            r:"Салат Оливье",               p:280, u:"por"},
-  {c:"cafe", t:"Mimoza Salata",            r:"Салат Мимоза",               p:200, u:"por"},
+  {c:"cafe", t:"Mimoza Salata",            r:"Салат Мимоза",               p:250, u:"por"},
   {c:"cafe", t:"Şuba Salata",              r:"Салат Шуба",                 p:300, u:"por"},
   {c:"cafe", t:"Tbilisi Salata",           r:"Салат Тбилиси",              p:300, u:"por"},
   {c:"cafe", t:"Düşbere Çorbası",          r:"Суп дюшбара",                p:250, u:"por"},
@@ -697,7 +729,18 @@ const IMGS = {
   "Bardak Çay": W+"thumb/5/5b/Turkish_tea2.jpg/960px-Turkish_tea2.jpg",
   "Kupa Çay": W+"thumb/5/5b/Turkish_tea2.jpg/960px-Turkish_tea2.jpg",
   "Gürcü Limonatası": W+"thumb/1/10/Lemonade_-_27682817724.jpg/960px-Lemonade_-_27682817724.jpg",
-  "Ayran": W+"8/8e/Fresh_ayran.jpg"
+  "Ayran": W+"8/8e/Fresh_ayran.jpg",
+  "Truboçka": W+"thumb/d/de/Cream_horns_%2815466292759%29.jpg/960px-Cream_horns_%2815466292759%29.jpg",
+  "Borucuk": W+"thumb/d/de/Cream_horns_%2815466292759%29.jpg/960px-Cream_horns_%2815466292759%29.jpg",
+  "Kumru": W+"thumb/9/99/Kumru_2024_22222.jpg/960px-Kumru_2024_22222.jpg",
+  "Köfte Ekmek": W+"thumb/6/64/Mmm...meatball_sub_%285183008075%29.jpg/960px-Mmm...meatball_sub_%285183008075%29.jpg",
+  "Kaşarlı Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
+  "Sucuklu Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
+  "Karışık Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
+  "Kutu İçecekler": W+"f/ff/Drinking_can_ring-pull_tab.jpg",
+  "Soda": W+"0/02/Stilles_Mineralwasser.jpg",
+  "Su": W+"0/02/Stilles_Mineralwasser.jpg",
+  "1 Litre İçecekler": W+"c/cf/Tumbler_of_cola_with_ice.jpg"
 };
 IMGS["Kızarmış Blinçik (tavuklu)"] = IMGS["Kızarmış Blinçik (lorlu)"] = IMGS["Blinçik (tavuklu)"] = IMGS["Blinçik (lorlu)"] = IMGS["Blinçik (etli)"];
 IMGS["Etli Krep"] = IMGS["Tavuklu Krep"] = IMGS["Lorlu Krep"] = IMGS["Blinçik (etli)"];
@@ -706,26 +749,35 @@ ITEMS.forEach(it => { if (IMGS[it.t]) it.img = IMGS[it.t]; });
 /* Client's own photos (from their QR menu) — local files in img/, override the stock photos above */
 const CLIENT_IMGS = {
   "Şuba (tavuklu)":"shuba", "Şuba Salata":"shuba",
+  "Ananaslı Salata":"ananasli", "Pancar Salatası":"pancar",
+  "Paştet (rulo)":"pastet", "Uskumru Set":"uskumru",
+  "«3 Bacı» Dolması (pişmiş)":"uc-baci", "Levengi Tavuk":"levengi",
+  "İdeal":"ideal", "Kudryaş":"kudryas", "Kudryaş (bütün)":"kudryas",
+  "Snickers":"snickers", "Vafli Tort (bütün)":"vafli",
+  "Paxlava":"paxlava", "Qoğal":"qogal",
+  "Cevizli Kurabiye «Oreşki»":"oreski", "Soçi Paklavası":"soci-paklavasi",
   "Stoliçnıy Salata":"olivye", "Olivye Salata":"olivye",
   "Mimoza":"mimoza", "Mimoza Salata":"mimoza",
   "Tbilisi Salata":"tbilisi",
   "Yarpaq Mantısı":"yarpaq-manti", "Yaprak Hengel":"yarpaq-manti",
   "Gürcü Hinkali":"hinkali", "Gürcü Hinkali (pişmiş)":"hinkali", "Gürcü Mantısı (Hinkali)":"hinkali",
-  "Pelmeni":"pelmeni", "Tavuklu Pelmeni":"pelmeni", "Rus Mantısı (Pelmeni)":"pelmeni",
-  "Vareniki":"vareniki", "Ukrayna Mantısı (Vareniki)":"vareniki",
+  "Pelmeni":"pelmeni", "Tavuklu Pelmeni":"vkusno-paket", "Rus Mantısı (Pelmeni)":"pelmeni",
+  "Düşbere":"dusbere", "Düşbere Çorbası":"dusbere",
+  "Şah Plov":"az-pilavi",
+  "Vareniki (etli)":"vareniki", "Vareniki (patatesli)":"patatesli-vareniki", "Ukrayna Mantısı (Vareniki)":"vareniki",
   "Patatesli Vareniki":"patatesli-vareniki",
   "Gürze":"gurze",
   "Azerbaycan Pilavı":"az-pilavi", "Basmati Pilav":"az-pilavi", "Döşemeli Plov":"az-pilavi", "Etli Plov":"az-pilavi",
-  "Yaprak Dolması":"yaprak-dolmasi", "Yaprak Dolması (pişmiş)":"yaprak-dolmasi", "«3 Bacı» Dolması (pişmiş)":"yaprak-dolmasi",
+  "Yaprak Dolması":"yaprak-dolmasi", "Yaprak Dolması (pişmiş)":"yaprak-dolmasi",
   "Lahana Dolması":"lahana-dolmasi", "Lahana Dolması (pişmiş)":"lahana-dolmasi",
   "Haçapuri (İmeretinskiy)":"hacapuri",
   "Yeşillikli Gözleme":"yesil-gozleme", "Etli Gözleme":"etli-gozleme",
-  "Blinçik (etli)":"blincik", "Blinçik (tavuklu)":"blincik", "Blinçik (lorlu)":"blincik",
-  "Kızarmış Blinçik (etli)":"blincik", "Kızarmış Blinçik (tavuklu)":"blincik", "Kızarmış Blinçik (lorlu)":"blincik",
-  "Etli Krep":"blincik", "Tavuklu Krep":"blincik", "Lorlu Krep":"blincik",
+  "Blinçik (etli)":"blincik", "Blinçik (tavuklu)":"tavuklu-blincik", "Blinçik (lorlu)":"lorlu-blincik",
+  "Kızarmış Blinçik (etli)":"blincik", "Kızarmış Blinçik (tavuklu)":"tavuklu-blincik", "Kızarmış Blinçik (lorlu)":"lorlu-blincik",
+  "Etli Krep":"blincik", "Tavuklu Krep":"tavuklu-blincik", "Lorlu Krep":"lorlu-blincik",
   "Dovğa":"dovga", "Dovğa Çorbası":"dovga",
   "Şekerbura":"sekerbura",
-  "Paxlava":"baklava", "Azerbaycan Baklavası":"baklava", "Soçi Paklavası":"baklava",
+  "Azerbaycan Baklavası":"baklava",
   "Napoleon":"napoleon", "Kuş Sütü":"kus-sutu", "Anjelika":"anjelika", "Medovik (Ballı)":"medovik",
   "Gürcü Limonatası":"limonata",
   "Özbek Mantısı":"ozbek-manti", "Özbek Mantı":"ozbek-manti",
@@ -1063,7 +1115,27 @@ $("#langSw").addEventListener("click", e => {
 const topbar = $("#topbar");
 addEventListener("scroll", () => topbar.classList.toggle("solid", scrollY > 40), {passive:true});
 
-/* ---------- init (v2 — photo cards + category tabs) ---------- */
+/* ---------- entry gate ---------- */
+(function(){
+  const gate = $("#gate");
+  if(store.get("gate") === "ok"){ gate.classList.add("off"); return; }
+  document.body.style.overflow = "hidden";
+  const tryCode = () => {
+    if($("#gateCode").value.trim() === "3465"){
+      store.set("gate","ok");
+      gate.classList.add("off");
+      document.body.style.overflow = "";
+    } else {
+      gate.classList.add("err");
+      setTimeout(()=>gate.classList.remove("err"), 400);
+      $("#gateCode").value = "";
+    }
+  };
+  $("#gateBtn").addEventListener("click", tryCode);
+  $("#gateCode").addEventListener("keydown", e => { if(e.key==="Enter") tryCode(); });
+})();
+
+/* ---------- init (v3 — client photos) ---------- */
 applyLang();
 topbar.classList.toggle("solid", scrollY > 40);
 </script>
