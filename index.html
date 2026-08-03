@@ -113,8 +113,26 @@ input,textarea,select{font-family:inherit;font-size:15px}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 28px rgba(31,168,85,.35)}
 .btn-wa svg{width:18px;height:18px;fill:#fff;stroke:none}
 
+/* ---------- mode switch (Kafe / Sipariş) ---------- */
+#navwrap{position:sticky;top:0;z-index:50;background:rgba(251,248,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.modebar{max-width:1180px;margin:0 auto;padding:14px 24px 0;display:flex;flex-direction:column;align-items:center;gap:7px}
+.modeseg{display:flex;gap:5px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px;box-shadow:var(--shadow)}
+.modeseg button{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;font-weight:800;letter-spacing:.01em;color:var(--ink-2);border-radius:99px;padding:11px 26px;transition:.2s;white-space:nowrap}
+.modeseg button svg{width:17px;height:17px;stroke:currentColor;fill:none}
+.modeseg button:hover{color:var(--g900)}
+.modeseg button.on{background:var(--g900);color:var(--gold-2);box-shadow:0 4px 16px rgba(12,53,42,.25)}
+#modeNote{font-size:12.5px;font-weight:600;color:var(--ink-2);text-align:center}
+@media(max-width:400px){.modeseg button svg{display:none}.modeseg button{font-size:12px;letter-spacing:-.01em}}
+@media(max-width:560px){
+  .modebar{padding:11px 12px 0}
+  .modeseg{width:100%}
+  .modeseg button{flex:1;justify-content:center;padding:11px 4px;font-size:12.5px;gap:6px}
+  .modeseg button svg{width:15px;height:15px}
+  #modeNote{font-size:11.5px;line-height:1.4;padding:0 12px}
+}
+
 /* ---------- category nav ---------- */
-#catnav{position:sticky;top:0;z-index:50;background:rgba(251,248,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+#catnav{background:none}
 #catnav .inner{display:flex;gap:8px;overflow-x:auto;padding:12px 24px;max-width:1180px;margin:0 auto;scrollbar-width:none}
 #catnav .inner::-webkit-scrollbar{display:none}
 .pill{flex:none;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--g800);background:#fff;border:1px solid var(--line);border-radius:99px;padding:9px 18px;transition:.2s;white-space:nowrap}
@@ -125,7 +143,7 @@ input,textarea,select{font-family:inherit;font-size:15px}
 
 /* ---------- catalog ---------- */
 main{padding:56px 0 80px}
-.cat-section{margin-bottom:64px;scroll-margin-top:86px}
+.cat-section{margin-bottom:64px;scroll-margin-top:120px}
 .cat-head{display:flex;align-items:baseline;gap:18px;margin-bottom:26px}
 .cat-head h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(28px,4vw,38px);color:var(--g900)}
 .cat-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
@@ -152,6 +170,7 @@ main{padding:56px 0 80px}
 .card .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px}
 .price{display:flex;align-items:baseline;gap:5px}
 .price b{font-size:20px;font-weight:800;color:var(--g900)}
+.price b.ask{font-size:13.5px;font-weight:700;color:var(--ink-2);letter-spacing:.01em}
 .price span{font-size:12px;font-weight:600;color:var(--ink-2)}
 .add{display:inline-flex;align-items:center;gap:6px;background:var(--g900);color:var(--gold-2);font-size:12.5px;font-weight:800;border-radius:99px;padding:9px 16px;transition:.18s}
 .add:hover{background:var(--g800);transform:scale(1.04)}
@@ -164,6 +183,10 @@ main{padding:56px 0 80px}
 .stepper .q{min-width:44px;text-align:center;color:#fff;font-size:13px;font-weight:800}
 #noRes{display:none;text-align:center;padding:70px 0;color:var(--ink-2)}
 #noRes .serif{font-size:30px;color:var(--g900);margin-bottom:8px}
+#soon{display:none;text-align:center;padding:76px 20px 90px;color:var(--ink-2)}
+#soon svg{width:46px;height:46px;stroke:var(--gold);fill:none;opacity:.85;margin-bottom:16px}
+#soon .serif{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--g900);margin-bottom:10px}
+#soon p{max-width:420px;margin:0 auto;font-size:14.5px;line-height:1.65}
 
 /* ---------- feature strip ---------- */
 .strip{background:var(--g900);color:var(--cream);padding:56px 0}
@@ -306,6 +329,14 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 <symbol id="i-bun" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5a8 8 0 0 1 16 0c0 1.7-3.6 3-8 3s-8-1.3-8-3Z"/><path d="M9 10.5l1.5 3M13 10l1 3.5"/></symbol>
 <symbol id="i-burger" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10a7.5 7.5 0 0 1 15 0Z"/><path d="M4.5 13h15"/><path d="M4.5 16h15v1a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3Z"/></symbol>
 <symbol id="i-cup" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 6c0-1 .8-1 .8-2M12 6c0-1 .8-1 .8-2"/></symbol>
+<symbol id="i-jar" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 8.5h9v9a2.5 2.5 0 0 1-2.5 2.5h-4a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 5.5h8v3H8z"/><path d="M9.5 12.5c1.7.8 3.3.8 5 0"/></symbol>
+<symbol id="i-can" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6.5" rx="6.5" ry="2.5"/><path d="M5.5 6.5v11c0 1.4 2.9 2.5 6.5 2.5s6.5-1.1 6.5-2.5v-11"/><path d="M8.5 11.5h7"/></symbol>
+<symbol id="i-milk" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v3l2.5 3.5V20a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V9.5L9 6Z"/><path d="M6.5 13h11"/></symbol>
+<symbol id="i-sausage" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5c8 0 13.5 5.5 13.5 13.5-8 0-13.5-5.5-13.5-13.5Z"/><path d="M4 4.5 6 6.5M18 18l1.8 1.8"/></symbol>
+<symbol id="i-candy" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="m8.5 9.5-4-2.5v10l4-2.5M15.5 9.5l4-2.5v10l-4-2.5"/></symbol>
+<symbol id="i-snack" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h11l1.5 3v11a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V7Z"/><path d="M5 7h14"/><path d="M9.5 11.5h5M9.5 15h3"/></symbol>
+<symbol id="i-grain" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M12 8c0-2.5 1.5-4.5 4-5 0 2.5-1.5 4.5-4 5Z"/><path d="M12 12c0-2.5-1.5-4.5-4-5 0 2.5 1.5 4.5 4 5Z"/><path d="M12 16c0-2.5 1.5-4.5 4-5 0 2.5-1.5 4.5-4 5Z"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l1 12h-15Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></symbol>
 <symbol id="i-cart" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h2l2.4 10.4a1.5 1.5 0 0 0 1.5 1.1h7.3a1.5 1.5 0 0 0 1.5-1.1L20.5 9H7"/><circle cx="10.5" cy="20.5" r="1"/><circle cx="17.5" cy="20.5" r="1"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
@@ -368,7 +399,17 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
   </div>
 </section>
 
-<nav id="catnav"><div class="inner" id="catPills"></div></nav>
+<div id="navwrap">
+  <div class="modebar">
+    <div class="modeseg" id="modeSeg">
+      <button data-mode="cafe"><svg><use href="#i-plate"/></svg><span data-t="modeCafe">Kafe Menüsü</span></button>
+      <button data-mode="order"><svg><use href="#i-truck"/></svg><span data-t="modeOrder">Eve Sipariş</span></button>
+      <button data-mode="products"><svg><use href="#i-bag"/></svg><span data-t="modeProducts">Ürünler</span></button>
+    </div>
+    <div id="modeNote"></div>
+  </div>
+  <nav id="catnav"><div class="inner" id="catPills"></div></nav>
+</div>
 
 <main id="menu">
   <div class="wrap">
@@ -376,6 +417,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
     <div id="noRes">
       <div class="serif" data-t="noResT">Sonuç bulunamadı</div>
       <p data-t="noResP">Farklı bir kelimeyle aramayı deneyin.</p>
+    </div>
+    <div id="soon">
+      <svg><use href="#i-bag"/></svg>
+      <div class="serif" data-t="soonT">Çok Yakında</div>
+      <p data-t="soonP">Bu bölüm hazırlanıyor. Ürünlerimiz kısa süre içinde burada olacak.</p>
     </div>
   </div>
 </main>
@@ -485,18 +531,25 @@ const UNITS = {
   p5:   {tr:"5 kişilik", ru:"на 5 персон"}
 };
 
+/* m: which section the category belongs to — "cafe" (dine-in, view only) or "order" (home delivery) */
 const CATS = [
-  {id:"salads", tr:"Salatalar",       ru:"Салаты",         icon:"i-salad"},
-  {id:"blin",   tr:"Blinçik",         ru:"Блинчики",       icon:"i-crepe"},
-  {id:"qutab",  tr:"Kutab",           ru:"Кутабы",         icon:"i-qutab"},
-  {id:"semi",   tr:"Yarımfabrikatlar",ru:"Полуфабрикаты",  icon:"i-dumpling"},
-  {id:"mains",  tr:"Ev Yemekleri",    ru:"Готовые блюда",  icon:"i-pot"},
-  {id:"cafe",   tr:"Kafe Menüsü",     ru:"Кафе-меню",      icon:"i-plate"},
-  {id:"cakes",  tr:"Tortlar",         ru:"Торты",          icon:"i-cake"},
-  {id:"sweets", tr:"Şirniyyatlar",    ru:"Сладости",       icon:"i-baklava"},
-  {id:"pirojki",tr:"Pirojki",         ru:"Пирожки",        icon:"i-bun"},
-  {id:"fast",   tr:"Fast Food",       ru:"Фастфуд",        icon:"i-burger"},
-  {id:"drinks", tr:"İçecekler",       ru:"Напитки",        icon:"i-cup"}
+  {id:"cafe",   m:"cafe",  tr:"Ana Menü",         ru:"Основное меню",  icon:"i-plate"},
+  {id:"drinks", m:"cafe",  tr:"İçecekler",        ru:"Напитки",        icon:"i-cup"},
+  {id:"semi",   m:"order", tr:"Yarımfabrikatlar", ru:"Полуфабрикаты",  icon:"i-dumpling"},
+  {id:"mains",  m:"order", tr:"Ev Yemekleri",     ru:"Готовые блюда",  icon:"i-pot"},
+  {id:"salads", m:"order", tr:"Salatalar",        ru:"Салаты",         icon:"i-salad"},
+  {id:"blin",   m:"order", tr:"Blinçik",          ru:"Блинчики",       icon:"i-crepe"},
+  {id:"qutab",  m:"order", tr:"Kutab",            ru:"Кутабы",         icon:"i-qutab"},
+  {id:"cakes",  m:"order", tr:"Tortlar",          ru:"Торты",          icon:"i-cake"},
+  {id:"sweets", m:"order", tr:"Şirniyyatlar",     ru:"Сладости",       icon:"i-baklava"},
+  {id:"pirojki",m:"order", tr:"Pirojki",          ru:"Пирожки",        icon:"i-bun"},
+  {id:"pjam",   m:"products", tr:"Reçel & Komposto",  ru:"Варенье и компоты",  icon:"i-jar"},
+  {id:"pcan",   m:"products", tr:"Konserve",          ru:"Консервы",           icon:"i-can"},
+  {id:"pdairy", m:"products", tr:"Süt Ürünleri",      ru:"Молочные продукты",  icon:"i-milk"},
+  {id:"pmeat",  m:"products", tr:"Şarküteri",         ru:"Колбасы и сосиски",  icon:"i-sausage"},
+  {id:"psweet", m:"products", tr:"Tatlı & Çikolata",  ru:"Сладости",           icon:"i-candy"},
+  {id:"psnack", m:"products", tr:"Atıştırmalık",      ru:"Снеки и лапша",      icon:"i-snack"},
+  {id:"pgroc",  m:"products", tr:"Market",            ru:"Бакалея",            icon:"i-grain"}
 ];
 
 /* c: category, t/r: TR/RU name, p: price TL, u: unit, b: badge raw|cooked, d: optional desc {tr,ru} */
@@ -614,22 +667,6 @@ const ITEMS = [
   {c:"pirojki", t:"Lahanalı Pirojki",     r:"Пирожок с капустой",     p:50, u:"pc"},
   {c:"pirojki", t:"Ciğerli Pirojki",      r:"Пирожок с печенью",      p:50, u:"pc"},
   {c:"pirojki", t:"Hot Dog",              r:"Хот-дог",                p:80, u:"pc"},
-  // Fast food
-  {c:"fast", t:"Hamburger",               r:"Гамбургер",              p:360, u:"pc"},
-  {c:"fast", t:"Mantarlı Hamburger",      r:"Гамбургер с грибами",    p:365, u:"pc"},
-  {c:"fast", t:"Cheeseburger",            r:"Чизбургер",              p:350, u:"pc"},
-  {c:"fast", t:"Hamburger Menü",          r:"Гамбургер меню",         p:420, u:"pc"},
-  {c:"fast", t:"Kajun Burger",            r:"Каджун бургер",          p:280, u:"pc"},
-  {c:"fast", t:"Kumru",                   r:"Кумру",                  p:300, u:"pc"},
-  {c:"fast", t:"Köfte Ekmek",             r:"Кёфте в хлебе",          p:320, u:"pc"},
-  {c:"fast", t:"Sosisli Patso",           r:"Патсо с сосиской",       p:250, u:"pc"},
-  {c:"fast", t:"Sosisli Jumbo",           r:"Джамбо с сосиской",      p:190, u:"pc"},
-  {c:"fast", t:"Kaşarlı Tost",            r:"Тост с кашаром",         p:120, u:"pc"},
-  {c:"fast", t:"Sucuklu Tost",            r:"Тост с суджуком",        p:140, u:"pc"},
-  {c:"fast", t:"Karışık Tost",            r:"Тост микс",              p:150, u:"pc"},
-  {c:"fast", t:"Patates Kızartması",      r:"Картофель фри",          p:120, u:"por"},
-  {c:"fast", t:"Soğan Halkası (8 adet)",  r:"Луковые кольца (8 шт)",  p:80,  u:"por"},
-  {c:"fast", t:"Nuggets (8 adet)",        r:"Наггетсы (8 шт)",        p:80,  u:"por"},
   // İçecekler
   {c:"drinks", t:"Espresso",              r:"Эспрессо",               p:100, u:"pc"},
   {c:"drinks", t:"Americano",             r:"Американо",              p:120, u:"pc"},
@@ -643,7 +680,76 @@ const ITEMS = [
   {c:"drinks", t:"Ayran",                 r:"Айран",                  p:50,  u:"pc"},
   {c:"drinks", t:"Soda",                  r:"Сода",                   p:60,  u:"pc"},
   {c:"drinks", t:"Su",                    r:"Вода",                   p:30,  u:"pc"},
-  {c:"drinks", t:"1 Litre İçecekler",     r:"Напитки 1 литр",         p:130, u:"pc"}
+  {c:"drinks", t:"1 Litre İçecekler",     r:"Напитки 1 литр",         p:130, u:"pc"},
+  /* ---- Məhsullar (imported goods) ---- */
+  {c:"pjam", t:"Kayısı Reçeli",        r:"Абрикосовое варенье",       p:null, u:"pc", img:"img/p-kaysi.webp"},
+  {c:"pjam", t:"Çilek Reçeli",         r:"Клубничное варенье",        p:null, u:"pc", img:"img/p-cilek.webp"},
+  {c:"pjam", t:"Beyaz Kiraz Reçeli",   r:"Варенье из белой черешни",  p:null, u:"pc", img:"img/p-beyazkiraz.webp"},
+  {c:"pjam", t:"Vişne Kompostosu",     r:"Вишнёвый компот",           p:250,  u:"kg", img:"img/p-kompot.webp"},
+  {c:"pcan", t:"Yoğunlaştırılmış Süt «Егорка»", r:"Молоко сгущённое «Егорка»", p:null, u:"pc", img:"img/p-egorka.webp"},
+  {c:"pcan", t:"Riga Gold Çaça",       r:"Шпроты Riga Gold",          p:null, u:"pc", img:"img/p-rigagold.webp"},
+  {c:"pcan", t:"Dana Konservesi",      r:"Тушёнка говяжья",           p:null, u:"pc", img:"img/p-tusonka.webp"},
+  {c:"pcan", t:"Kızarmış Çaça",        r:"Килька обжаренная",         p:null, u:"pc", img:"img/p-kilka-kizarmis.webp"},
+  {c:"pcan", t:"Şprot",                r:"Шпроты",                    p:null, u:"pc", img:"img/p-sprot.webp"},
+  {c:"pcan", t:"Yoğunlaştırılmış Süt «Заречье»", r:"Сгущёнка «Заречье»", p:null, u:"pc", img:"img/p-zarechye.webp"},
+  {c:"pcan", t:"Çaça (kavanoz)",       r:"Килька в банке",            p:null, u:"pc", img:"img/p-kilka-kavanoz.webp"},
+  {c:"pcan", t:"Bonduelle Bezelye",    r:"Горошек Bonduelle",         p:null, u:"pc", img:"img/p-bezelye.webp"},
+  {c:"pcan", t:"Havyar «Икринка»",     r:"Икра «Икринка»",            p:null, u:"pc", img:"img/p-ikrinka.webp"},
+  {c:"pcan", t:"Havyar",               r:"Икра",                      p:null, u:"pc", img:"img/p-ikra.webp"},
+  {c:"pcan", t:"Sebzeli Çaça",         r:"Килька с овощами",          p:null, u:"pc", img:"img/p-kilka-sebzeli.webp"},
+  {c:"pcan", t:"Paştet",               r:"Паштет",                    p:null, u:"pc", img:"img/p-pastet.webp"},
+  {c:"pcan", t:"Matias Ringa Fileto",  r:"Сельдь «Матиас» филе",      p:null, u:"pc", img:"img/p-matias.webp"},
+  {c:"pcan", t:"Deniz Ürünleri Salatası", r:"Салат из морепродуктов", p:null, u:"pc", img:"img/p-deniz-salata.webp"},
+  {c:"pdairy", t:"Lambert Peyniri",    r:"Сыр «Ламбер»",              p:null, u:"kg", img:"img/p-lamber.webp"},
+  {c:"pdairy", t:"President Smetana",  r:"Сметана President",         p:null, u:"pc", img:"img/p-smetana.webp"},
+  {c:"pdairy", t:"Yoğunlaştırılmış Süt (poşet)", r:"Сгущёнка (дой-пак)", p:null, u:"pc", img:"img/p-sgushenka-poset.webp"},
+  {c:"pdairy", t:"Yoğunlaştırılmış Süt (şişe)",  r:"Сгущёнка (бутылка)", p:null, u:"pc", img:"img/p-sgushenka-sise.webp"},
+  {c:"pdairy", t:"Oltermanni Peyniri", r:"Сыр Oltermanni",            p:null, u:"pc", img:"img/p-oltermanni.webp"},
+  {c:"pdairy", t:"Kurut",              r:"Курт",                      p:null, u:"kg", img:"img/p-kurt.webp"},
+  {c:"pdairy", t:"Çeçil Peyniri",      r:"Сыр чечил",                 p:null, u:"kg", img:"img/p-cecil.webp"},
+  {c:"pdairy", t:"Pasta Katı «Коржи»", r:"Коржи для торта",           p:null, u:"pc", img:"img/p-korzhi.webp"},
+  {c:"pdairy", t:"Süt",                r:"Молоко",                    p:null, u:"pc", img:"img/p-sut.webp"},
+  {c:"pmeat", t:"Ev Sucuğu (halka)",   r:"Колбаса домашняя",          p:null, u:"kg", img:"img/p-kolbasa-halka.webp"},
+  {c:"pmeat", t:"Servelat",            r:"Сервелат",                  p:null, u:"kg", img:"img/p-servelat.webp"},
+  {c:"pmeat", t:"Mazali Sucuk",        r:"Колбаса Mazali",            p:null, u:"kg", img:"img/p-mazali.webp"},
+  {c:"pmeat", t:"Sosis",               r:"Сосиски",                   p:null, u:"kg", img:"img/p-sosis.webp"},
+  {c:"pmeat", t:"Peynirli Sosis",      r:"Сосиски с сыром",           p:null, u:"kg", img:"img/p-sosis-peynirli.webp"},
+  {c:"pmeat", t:"Sütlü Sosis",         r:"Сосиски молочные",          p:null, u:"kg", img:"img/p-sosis-sut.webp"},
+  {c:"pmeat", t:"Sagban Sosis",        r:"Сосиски Sagban",            p:null, u:"kg", img:"img/p-sagban-sosis.webp"},
+  {c:"pmeat", t:"Bacon",               r:"Бекон",                     p:null, u:"pc", img:"img/p-bekon.webp"},
+  {c:"pmeat", t:"Sagban Izgara Sucuk", r:"Колбаски гриль Sagban",     p:null, u:"kg", img:"img/p-sagban-izgara.webp"},
+  {c:"pmeat", t:"Salam",               r:"Салями",                    p:null, u:"kg", img:"img/p-salam.webp"},
+  {c:"pmeat", t:"«Егерские» Sosis",    r:"Сосиски «Егерские»",        p:null, u:"kg", img:"img/p-egerskie.webp"},
+  {c:"pmeat", t:"«Тульские» Sosis",    r:"Сосиски «Тульские»",        p:null, u:"kg", img:"img/p-tulskiy-sosis.webp"},
+  {c:"psweet", t:"«Мишка косолапый»",  r:"Конфеты «Мишка косолапый»", p:null, u:"kg", img:"img/p-mishka.webp"},
+  {c:"psweet", t:"Kazakistan Çikolatası", r:"Шоколад «Казахстан»",    p:null, u:"pc", img:"img/p-kazakhstan.webp"},
+  {c:"psweet", t:"«Белочка»",          r:"Конфеты «Белочка»",         p:null, u:"kg", img:"img/p-belochka.webp"},
+  {c:"psweet", t:"Krokant",            r:"Крокант",                   p:null, u:"pc", img:"img/p-krokant.webp"},
+  {c:"psweet", t:"Rus Zencefilli Kurabiye", r:"Пряники",              p:null, u:"kg", img:"img/p-pryanik.webp"},
+  {c:"psweet", t:"Karışık Şekerleme",  r:"Конфеты ассорти",           p:null, u:"kg", img:"img/p-sekerleme.webp"},
+  {c:"psweet", t:"Roshen «Коровка»",   r:"Roshen «Коровка»",          p:null, u:"pc", img:"img/p-korivka.webp"},
+  {c:"psweet", t:"Konti Bonjour",      r:"Konti Bonjour",             p:null, u:"pc", img:"img/p-bonjour.webp"},
+  {c:"psweet", t:"«Жако» Marshmallow", r:"Зефир «Жако»",              p:null, u:"pc", img:"img/p-zhako.webp"},
+  {c:"psweet", t:"Karamel",            r:"Карамель",                  p:null, u:"kg", img:"img/p-karamel.webp"},
+  {c:"psweet", t:"Tula Pryaniği",      r:"Тульский пряник",           p:null, u:"pc", img:"img/p-tula-pryanik.webp"},
+  {c:"psweet", t:"Milky Splash",       r:"Milky Splash",              p:null, u:"kg", img:"img/p-milky-splash.webp"},
+  {c:"psweet", t:"Çak-Çak",            r:"Чак-чак",                   p:null, u:"pc", img:"img/p-chakchak.webp"},
+  {c:"psweet", t:"Roshen Aerated Çikolata", r:"Шоколад Roshen пористый", p:null, u:"pc", img:"img/p-roshen.webp"},
+  {c:"psnack", t:"Buldak Carbonara",   r:"Лапша Buldak Carbonara",    p:null, u:"pc", img:"img/p-buldak-carbonara.webp"},
+  {c:"psnack", t:"Buldak Hot Chicken", r:"Лапша Buldak Hot Chicken",  p:null, u:"pc", img:"img/p-buldak-hot.webp"},
+  {c:"psnack", t:"Finchuza Erişte",    r:"Лапша «Финчуза»",           p:null, u:"pc", img:"img/p-finchuza.webp"},
+  {c:"psnack", t:"Big Bon",            r:"Big Bon",                   p:null, u:"pc", img:"img/p-bigbon.webp"},
+  {c:"psnack", t:"Çekirdek «Джинн»",   r:"Семечки «Джинн»",           p:null, u:"pc", img:"img/p-cekirdek.webp"},
+  {c:"psnack", t:"«Вкусняшка» Cips",   r:"Снеки «Вкусняшка»",         p:null, u:"pc", img:"img/p-vitaminka.webp"},
+  {c:"psnack", t:"Flint Kruton",       r:"Сухарики Flint",            p:null, u:"pc", img:"img/p-flint.webp"},
+  {c:"psnack", t:"Doshirak",           r:"Доширак",                   p:null, u:"pc", img:"img/p-doshirak.webp"},
+  {c:"psnack", t:"«Кузя» Mısır Çerezi",r:"Кукурузные палочки «Кузя»", p:null, u:"pc", img:"img/p-kuzya.webp"},
+  {c:"pgroc", t:"Basmati Pirinç",      r:"Рис басмати",               p:null, u:"pc", img:"img/p-basmati.webp"},
+  {c:"pgroc", t:"«Махеевъ» Mayonez",   r:"Майонез «Махеевъ»",         p:null, u:"pc", img:"img/p-maheev.webp"},
+  {c:"pgroc", t:"Brânză Peyniri",      r:"Брынза",                    p:null, u:"pc", img:"img/p-branza.webp"},
+  {c:"pgroc", t:"Karabuğday",          r:"Гречка",                    p:null, u:"pc", img:"img/p-karabugday.webp"},
+  {c:"pgroc", t:"İrmik",               r:"Манка",                     p:null, u:"pc", img:"img/p-irmik.webp"},
+  {c:"pgroc", t:"Darı",                r:"Пшено",                     p:null, u:"pc", img:"img/p-dari.webp"}
 ];
 ITEMS.forEach((it,i)=>it.id=i);
 
@@ -711,16 +817,6 @@ const IMGS = {
   "Lahanalı Pirojki": W+"thumb/b/b0/Piroshki.JPG/960px-Piroshki.JPG",
   "Ciğerli Pirojki": W+"thumb/b/b0/Piroshki.JPG/960px-Piroshki.JPG",
   "Hot Dog": W+"thumb/b/b1/Hot_dog_with_mustard.png/960px-Hot_dog_with_mustard.png",
-  "Hamburger": W+"thumb/0/0b/RedDot_Burger.jpg/960px-RedDot_Burger.jpg",
-  "Hamburger Menü": W+"thumb/0/0b/RedDot_Burger.jpg/960px-RedDot_Burger.jpg",
-  "Kajun Burger": W+"thumb/0/0b/RedDot_Burger.jpg/960px-RedDot_Burger.jpg",
-  "Cheeseburger": W+"thumb/4/4d/Cheeseburger.jpg/960px-Cheeseburger.jpg",
-  "Mantarlı Hamburger": W+"thumb/4/4d/Cheeseburger.jpg/960px-Cheeseburger.jpg",
-  "Sosisli Patso": W+"thumb/b/b1/Hot_dog_with_mustard.png/960px-Hot_dog_with_mustard.png",
-  "Sosisli Jumbo": W+"thumb/b/b1/Hot_dog_with_mustard.png/960px-Hot_dog_with_mustard.png",
-  "Patates Kızartması": W+"8/83/French_Fries.JPG",
-  "Soğan Halkası (8 adet)": W+"thumb/e/eb/OnionRings.JPG/960px-OnionRings.JPG",
-  "Nuggets (8 adet)": W+"6/64/Chicken_Nuggets.jpg",
   "Espresso": W+"thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/960px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
   "Americano": W+"thumb/4/41/Espresso_Americano.jpeg/960px-Espresso_Americano.jpeg",
   "Cappuccino": W+"thumb/7/70/Cappuccino_in_original.jpg/960px-Cappuccino_in_original.jpg",
@@ -732,11 +828,6 @@ const IMGS = {
   "Ayran": W+"8/8e/Fresh_ayran.jpg",
   "Truboçka": W+"thumb/d/de/Cream_horns_%2815466292759%29.jpg/960px-Cream_horns_%2815466292759%29.jpg",
   "Borucuk": W+"thumb/d/de/Cream_horns_%2815466292759%29.jpg/960px-Cream_horns_%2815466292759%29.jpg",
-  "Kumru": W+"thumb/9/99/Kumru_2024_22222.jpg/960px-Kumru_2024_22222.jpg",
-  "Köfte Ekmek": W+"thumb/6/64/Mmm...meatball_sub_%285183008075%29.jpg/960px-Mmm...meatball_sub_%285183008075%29.jpg",
-  "Kaşarlı Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
-  "Sucuklu Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
-  "Karışık Tost": W+"thumb/d/d1/Tuna_melt_sandwich_with_fries.jpg/960px-Tuna_melt_sandwich_with_fries.jpg",
   "Kutu İçecekler": W+"f/ff/Drinking_can_ring-pull_tab.jpg",
   "Soda": W+"0/02/Stilles_Mineralwasser.jpg",
   "Su": W+"0/02/Stilles_Mineralwasser.jpg",
@@ -744,7 +835,7 @@ const IMGS = {
 };
 IMGS["Kızarmış Blinçik (tavuklu)"] = IMGS["Kızarmış Blinçik (lorlu)"] = IMGS["Blinçik (tavuklu)"] = IMGS["Blinçik (lorlu)"] = IMGS["Blinçik (etli)"];
 IMGS["Etli Krep"] = IMGS["Tavuklu Krep"] = IMGS["Lorlu Krep"] = IMGS["Blinçik (etli)"];
-ITEMS.forEach(it => { if (IMGS[it.t]) it.img = IMGS[it.t]; });
+ITEMS.forEach(it => { if (!it.img && IMGS[it.t]) it.img = IMGS[it.t]; });
 
 /* Client's own photos (from their QR menu) — local files in img/, override the stock photos above */
 const CLIENT_IMGS = {
@@ -756,6 +847,9 @@ const CLIENT_IMGS = {
   "Snickers":"snickers", "Vafli Tort (bütün)":"vafli",
   "Paxlava":"paxlava", "Qoğal":"qogal",
   "Cevizli Kurabiye «Oreşki»":"oreski", "Soçi Paklavası":"soci-paklavasi",
+  "Etli Kutab":"kutab-etli", "İşkembeli Kutab":"kutab-iskembeli",
+  "Otlu Kutab":"kutab-otlu", "Otlu-Peynirli Kutab":"kutab-otlu",
+  "Truboçka":"trubocka",
   "Stoliçnıy Salata":"olivye", "Olivye Salata":"olivye",
   "Mimoza":"mimoza", "Mimoza Salata":"mimoza",
   "Tbilisi Salata":"tbilisi",
@@ -787,7 +881,7 @@ const CLIENT_IMGS = {
   "Doğramaç":"dogramac", "Azerbaycan Kahvaltısı":"az-kahvalti",
   "Funçoza Salatası":"funcoza", "Çıtır Patlıcan Salatası":"citir-patlican"
 };
-ITEMS.forEach(it => { if (CLIENT_IMGS[it.t]) it.img = "img/" + CLIENT_IMGS[it.t] + ".webp"; });
+ITEMS.forEach(it => { if (!it.img && CLIENT_IMGS[it.t]) it.img = "img/" + CLIENT_IMGS[it.t] + ".webp"; });
 
 /* Stock control: set st on any item — 0 = sold out (can't order), 1–5 shows "Son X" badge.
    Remove the st field (or set a high number) when back in normal supply. */
@@ -815,6 +909,11 @@ const I18N = {
     toastAdd:"sepete eklendi",
     badgeRaw:"Yarımfabrikat", badgeCooked:"Pişmiş",
     soldOut:"Tükendi", lastX:"Son",
+    modeCafe:"Kafe Menüsü", modeOrder:"Eve Sipariş", modeProducts:"Ürünler",
+    noteCafe:"Kafemizde servis edilir · Her gün 10:00 – 22:00",
+    noteOrder:"Sepete ekleyin, siparişiniz WhatsApp'tan bize ulaşsın",
+    noteProducts:"Seçilmiş ithal ürünler · Çok yakında",
+    askPrice:"Fiyat için sorunuz", soonT:"Çok Yakında", soonP:"Bu bölüm hazırlanıyor. Ürünlerimiz kısa süre içinde burada olacak.",
     msgHead:"Merhaba Vkusno Homemade! 👋 Sipariş vermek istiyorum:",
     msgTotal:"Toplam", msgType:"Teslimat", msgDelivery:"Adrese teslim", msgPickup:"Gel-Al",
     msgName:"Ad", msgAddr:"Adres", msgNote:"Not"
@@ -840,6 +939,11 @@ const I18N = {
     toastAdd:"добавлено в корзину",
     badgeRaw:"Полуфабрикат", badgeCooked:"Готовое",
     soldOut:"Нет в наличии", lastX:"Осталось",
+    modeCafe:"Меню кафе", modeOrder:"Заказ на дом", modeProducts:"Товары",
+    noteCafe:"Подаётся у нас в кафе · Ежедневно 10:00 – 22:00",
+    noteOrder:"Добавьте в корзину — заказ уйдёт нам в WhatsApp",
+    noteProducts:"Отборные импортные продукты · Уже скоро",
+    askPrice:"Цена по запросу", soonT:"Уже скоро", soonP:"Раздел готовится. Наши товары появятся здесь совсем скоро.",
     msgHead:"Здравствуйте, Vkusno Homemade! 👋 Хочу сделать заказ:",
     msgTotal:"Итого", msgType:"Получение", msgDelivery:"Доставка", msgPickup:"Самовывоз",
     msgName:"Имя", msgAddr:"Адрес", msgNote:"Комментарий"
@@ -860,7 +964,8 @@ let lang = store.get("lang", "tr");
 let cart = store.get("cart", {});           // {itemId: qty}
 let deliveryType = "delivery";
 let query = "";
-let activeCat = CATS[0].id;                 // one category shown at a time (app-style)
+let mode = store.get("mode", "order");      // "cafe" (view-only) | "order" (with cart)
+let activeCat = (CATS.find(c => c.m === mode) || CATS[0] || {}).id;                 // one category shown at a time (app-style)
 
 const t = k => I18N[lang][k] || k;
 const name = it => lang === "ru" ? it.r : it.t;
@@ -876,7 +981,8 @@ function renderCatalog(){
   let any = false;
 
   /* app-style: show only the active category; while searching, show matches from all */
-  const cats = query ? CATS : CATS.filter(c => c.id === activeCat);
+  const inMode = CATS.filter(c => c.m === mode);
+  const cats = query ? inMode : inMode.filter(c => c.id === activeCat);
 
   cats.forEach(cat => {
     const items = ITEMS.filter(it => it.c === cat.id && matches(it));
@@ -909,13 +1015,14 @@ function renderCatalog(){
           <h3>${name(it)}</h3>
           ${it.d ? `<div class="desc">${it.d[lang]}</div>` : ""}
           <div class="row">
-            <div class="price"><b>${fmt(it.p)} TL</b><span>/ ${unitLabel(it.u)}</span></div>
+            <div class="price">${it.p ? `<b>${fmt(it.p)} TL</b><span>/ ${unitLabel(it.u)}</span>` : `<b class="ask">${t("askPrice")}</b>`}</div>
+            ${mode !== "cafe" && it.p ? `
             <button class="add ${qty ? "hide" : ""}" data-add="${it.id}" ${it.st === 0 ? "disabled" : ""}><svg><use href="#i-plus"/></svg>${it.st === 0 ? t("soldOut") : t("add")}</button>
             <div class="stepper ${qty ? "show" : ""}" data-step="${it.id}">
               <button data-dec="${it.id}">−</button>
               <span class="q">${qtyLabel(it, qty)}</span>
               <button data-inc="${it.id}">+</button>
-            </div>
+            </div>` : ""}
           </div>
         </div>`;
       grid.appendChild(card);
@@ -923,7 +1030,10 @@ function renderCatalog(){
     catalog.appendChild(sec);
   });
 
-  $("#noRes").style.display = any ? "none" : "block";
+  const empty = !CATS.some(c => c.m === mode);
+  $("#noRes").style.display = (any || empty) ? "none" : "block";
+  $("#soon").style.display = empty ? "block" : "none";
+  $("#catnav").style.display = empty ? "none" : "";
   renderPills();
 }
 
@@ -937,11 +1047,19 @@ function qtyLabel(it, qty){
   return it.u === "kg" ? fmt(qty) + " kg" : fmt(qty);
 }
 
+/* scroll so the section heading lands just below the sticky nav, never under it */
+function scrollToMenu(){
+  const nav = $("#navwrap"), menu = $("#menu");
+  if(!nav || !menu) return;
+  const top = menu.getBoundingClientRect().top + window.scrollY - nav.offsetHeight;
+  window.scrollTo({top: Math.max(0, top), behavior: "smooth"});
+}
+
 /* ---------- pills (category tabs) ---------- */
 function renderPills(){
   const holder = $("#catPills");
   holder.innerHTML = "";
-  CATS.forEach(cat => {
+  CATS.filter(c => c.m === mode).forEach(cat => {
     if(query && !ITEMS.some(it => it.c === cat.id && matches(it))) return;
     const b = document.createElement("button");
     b.className = "pill" + (!query && cat.id === activeCat ? " on" : "");
@@ -952,13 +1070,32 @@ function renderPills(){
       if(query){ query = ""; $("#searchInput").value = ""; }
       renderCatalog();
       b.scrollIntoView({inline:"center", block:"nearest", behavior:"smooth"});
-      $("#menu").scrollIntoView({behavior:"smooth", block:"start"});
+      scrollToMenu();
     };
     holder.appendChild(b);
   });
 }
 
 /* ---------- cart ---------- */
+/* ---------- mode (Kafe Menüsü / Eve Sipariş) ---------- */
+function renderMode(){
+  $$("#modeSeg button").forEach(b => b.classList.toggle("on", b.dataset.mode === mode));
+  $("#modeNote").textContent = mode === "cafe" ? t("noteCafe") : t("noteOrder");
+  document.body.classList.toggle("cafe-mode", mode === "cafe");
+}
+$("#modeSeg").addEventListener("click", e => {
+  const b = e.target.closest("button");
+  if(!b || b.dataset.mode === mode) return;
+  mode = b.dataset.mode;
+  store.set("mode", mode);
+  const first = CATS.find(c => c.m === mode);
+  activeCat = first ? first.id : null;
+  query = ""; $("#searchInput").value = "";
+  renderMode();
+  renderCatalog();
+  scrollToMenu();
+});
+
 function setQty(id, qty){
   const it = ITEMS[id];
   qty = Math.max(0, Math.round(qty * 2) / 2);
@@ -1100,6 +1237,7 @@ function applyLang(){
   $$("#langSw button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
   $$("[data-t]").forEach(el => { el.textContent = t(el.dataset.t); });
   $("#searchInput").placeholder = t("search");
+  renderMode();
   renderCatalog();
   renderCartBadge();
   renderDrawer();
