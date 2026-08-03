@@ -166,6 +166,9 @@ main{padding:56px 0 80px}
 .badge.low{background:#FDF3DC;color:#8A6A10}
 .badge.out{background:#F6E0DE;color:#A33B32}
 .card .ph .stk{left:auto;right:10px}
+.card.prod .ph{background:linear-gradient(180deg,#FBF8F1,#F2EDE1)}
+.card.prod .ph img{object-fit:contain;padding:7px}
+.card.prod:hover .ph img{transform:scale(1.03)}
 .add:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .card .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px}
 .price{display:flex;align-items:baseline;gap:5px}
@@ -1004,7 +1007,7 @@ function renderCatalog(){
     items.forEach(it => {
       const qty = cart[it.id] || 0;
       const card = document.createElement("article");
-      card.className = "card";
+      card.className = "card" + (mode === "products" ? " prod" : "");
       card.innerHTML = `
         <div class="ph">
           ${it.img ? `<img src="${it.img}" alt="${name(it)}" loading="lazy" onerror="this.style.display='none'">` : `<svg><use href="#${cat.icon}"/></svg>`}
